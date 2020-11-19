@@ -1,16 +1,10 @@
 <?php
-    // error_reporting(E_ERROR | E_PARSE);
-    $hostname = "localhost";
-    $username = "root";
-    $password = "";
-    $databasename = "databasetuvung";
 
-    $con = new mysqli($hostname,$username,$password,$databasename);
+   $hostname = "localhost";
+   $username = "root";
+   $password = "";
+   $databasename = "databasetuvung";
 
-    if($con->connect_errno){
-        echo "Lỗi connect";
-    }else{
-        $con->set_charset("utf8");
-    }
-
+   $con = mysqli_connect($hostname,$username,$password,$databasename);
+   mysqli_query($con ,"SET NAMES 'utf8'");
 ?>
